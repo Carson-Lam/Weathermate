@@ -6,41 +6,37 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@650&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="text-center">
-    <div class="container mt-3 mb-3" style="width: 450px;">
-        <h2>WeatherMate</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>City</th>
-                    <th>Weather</th>
-                    <th>Temp</th>
-                    <th>Max Temp</th>
-                    <th>Min Temp</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="cityDisplay"></td>
-                    <td id="weather"></td>
-                    <td id="temp"></td>
-                    <td id="maxtemp"></td>
-                    <td id="mintemp"></td>
-                </tr>
-            </tbody>
-        </table>
+<body class = "text-center">
+    <div id = "mainContainer">
+        <div id = "CityWeatherContainer">
+            <span id="cityDisplay" class = "headerText">...</span>
+            <span>&nbsp;|&nbsp;</span>
+            <span id="weather" class = "headerText">...</span>
+        </div>
+        
+        <img src="images/SunnySprite.png" alt = "SunnySprite" id="weatherSprite"></img>
+
+        <div class = "sectionSeperator"></div>
+        
+        <div id = "tempContainer">
+            <span id="mintemp">...</span>
+            <span id="temp">...</span>
+            <span id="maxtemp">...</span>
+        </div>
+
         <form id="weatherForm">
-            <label for="city">Enter your city, region, country:</label>
-            <br>
-            <input type="text" id="city" name="city" required placeholder="Example: Duluth, GA, US" style="width: 70%;">
+            <!-- <label for="city">Enter your city, region, country:</label> -->
+            <!-- <br> -->
+            <input type="text" id="city" name="city" required placeholder="Custom City: (Tokyo, JP)">
             <!--<button type="submit" style="border: 0">Get Weather</button>-->
         </form>
     </div>
 
-    <!-- <div class="popup">
+    <div class="popup">
         <button id="close">&times;</button>
         <h3>Welcome to WeatherMate!</h3>
         <ul class="list text-start">
@@ -54,7 +50,7 @@
                 for the most accurate results!
             </li>
         </ul>
-    </div> -->
+    </div>
 
     <!--Script-->
     <script src="script.js"></script>
