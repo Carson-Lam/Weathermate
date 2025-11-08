@@ -22,11 +22,27 @@ async function fetchData() {
                 document.getElementById("temp").innerHTML = record.main.temp;
                 document.getElementById("maxtemp").innerHTML = record.main.temp_max;
                 document.getElementById("mintemp").innerHTML = record.main.temp_min;
+                
+                if (record.weather[0].main === "Thunderstorm") {
+                    document.getElementById("weatherSprite").src = "images/ThunderstormSprite.png";
+                } else if (record.weather[0].main === "Drizzle" || record.weather[0].main === "Rain") {
+                    document.getElementById("weatherSprite").src = "images/RainySprite.png";
+                } else if (record.weather[0].main === "Snow") {
+                    document.getElementById("weatherSprite").src = "images/SnowySprite.png";
+                } else if (record.weather[0].main === "Clear") { 
+                    document.getElementById("weatherSprite").src = "images/SunnySprite.png";
+                } else if (record.weather[0].main === "Clouds") {
+                    document.getElementById("weatherSprite").src = "images/CloudySprite.png";
+                } else {
+                    document.getElementById("weatherSprite").src = "images/MistySprite.png";
+                }
+
             },
             (error) => {
                 cityOutput.textContent = `Error: ${error.message}`;
             }
         )
+
     // });
 
     document.getElementById("weatherForm").addEventListener("submit", async function (event) {
@@ -40,6 +56,21 @@ async function fetchData() {
             document.getElementById("temp").innerHTML = record.main.temp;
             document.getElementById("maxtemp").innerHTML = record.main.temp_max;
             document.getElementById("mintemp").innerHTML = record.main.temp_min;
+
+            if (record.weather[0].main === "Thunderstorm") {
+                document.getElementById("weatherSprite").src = "images/ThunderstormSprite.png";
+            } else if (record.weather[0].main === "Drizzle" || record.weather[0].main === "Rain") {
+                document.getElementById("weatherSprite").src = "images/RainySprite.png";
+            } else if (record.weather[0].main === "Snow") {
+                document.getElementById("weatherSprite").src = "images/SnowySprite.png";
+            } else if (record.weather[0].main === "Clear") { 
+                document.getElementById("weatherSprite").src = "images/SunnySprite.png";
+            } else if (record.weather[0].main === "Clouds") {
+                document.getElementById("weatherSprite").src = "images/CloudySprite.png";
+            } else {
+                document.getElementById("weatherSprite").src = "images/MistySprite.png";
+            }
+
         } catch (error) {
             alert("Could not fetch weather data for entered city!")
             document.getElementById("cityDisplay").innerHTML = " ";
@@ -49,7 +80,12 @@ async function fetchData() {
             document.getElementById("mintemp").innerHTML = " ";
             console.error("There was an error fetching the weather data:", error);
         }
-    });
+    }, 
+    (error) => {
+        cityOutput.textContent = `Error: ${error.message}`;
+    }
+
+);
 }
 fetchData();
 

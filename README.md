@@ -8,3 +8,4 @@ A minimalist weather extension for google chrome using OpenWeather API.
 **4.** Click on "Load Unpacked" and select the "docs" folder inside the "WeatherMate" folder <br>
 
 
+
