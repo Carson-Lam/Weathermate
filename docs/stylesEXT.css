@@ -1,0 +1,230 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Base size - change this to scale everything */
+    font-size: 16px;
+    
+    /* Dimensions */
+    --popup-width: 30rem;      
+    --popup-height: 37.5rem;   
+    
+    /* Spacing */
+    --space-xs: 0.3125rem;     /* 5px */
+    --space-sm: 0.625rem;      /* 10px */
+    --space-md: 0.9375rem;     /* 15px */
+    --space-lg: 1.22rem;       /* 20px */
+    
+    /* Font sizes */
+    --font-xs: 0.95rem;      
+    --font-sm: 1.1rem;       
+    --font-md: 1.45rem;      
+    --font-lg: 2.8rem;      
+    
+    /* Component sizes */
+    --sprite-size: 14.8rem;    
+    --separator-height: 0.1875rem; 
+    
+    /* Colors */
+    --bg-main: #404B5B;
+    --bg-input: #707B8B;
+    --bg-popup: aliceblue;
+    --color-white: white;
+    --color-cold: #94C8E1;
+    --color-hot: #E19494;
+    --color-gray: grey;
+    --color-black: black;
+    --color-flavor: #FF530A;
+    --border-radius: 0.3125rem;
+}
+
+html, body {
+    width: var(--popup-width);
+    height: var(--popup-height);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Popup styling */
+.popup {
+    background-color: var(--bg-popup);
+    width: 90%;
+    height: 75%;
+    padding: var(--space-md);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup h3 {
+    margin-top: var(--space-md);
+}
+
+.popup .list {
+    font-size: var(--font-xs);
+}
+
+.popup .list li {
+    margin-bottom: var(--space-xs);
+}
+
+.popup button {
+    position: absolute;
+    top: 0;
+    right: var(--space-sm);
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.5625rem; /* 25px */
+    color: var(--color-gray);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#mainContainer {
+    background-color: var(--bg-main);
+    /* background-color: red; */ /* Debugging */
+    border-color: var(--color-white);
+    display: inline-block;
+    min-width: 17rem;  
+    max-width: var(--popup-width);
+    padding: 10px;
+}
+
+.separator {
+    color: var(--color-flavor);
+    font-size: var(--font-sm);
+    margin: 0 var(--space-sm);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerText {
+    /* background-color: yellow; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: var(--font-md);
+    color: white;
+}
+
+#CityWeatherContainer {
+    /* background-color: blue; */
+    color: var(--color-flavor);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#weatherSprite {
+    /* background-color: green; */
+    width: var(--sprite-size);
+    height: var(--sprite-size);
+    margin: var(--space-xs) 0;
+}
+
+.sectionSeperator {
+    /* background-color: indigo; */
+    width: 100%;
+    height: var(--separator-height);
+    background-color: var(--color-flavor);
+}
+
+#tempContainer {
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainTempContainer {
+    /* background-color: purple; */
+    margin: 0 var(--space-lg);
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#temp {
+    /* background-color: orange; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+    font-size: var(--font-lg);
+}
+
+#tempToggle{
+    background-color: var(--bg-input);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.4rem 0.5rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: var(--font-sm);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: var(--space-sm);
+}
+#tempToggle:hover {
+    background-color: var(--color-flavor);
+}
+
+#mintemp {
+    /* background-color: brown; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--color-cold);
+    font-size: var(--font-xs);
+}
+
+#maxtemp {
+    /* background-color: brown; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--color-hot);
+    font-size: var(--font-xs);
+}
+
+#weatherForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 var(--space-sm) 0;
+}
+
+#city {
+    width: 100%;
+    font-size: var(--font-sm);
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    border: none;
+    border-radius: var(--border-radius); 
+    background-color: var(--bg-input);
+    color: var(--color-white);
+    outline: none;
+    padding: 0 var(--space-xs);
+}
+
+#city::placeholder {
+    color: var(--color-black);
+    opacity: 0.4;
+}

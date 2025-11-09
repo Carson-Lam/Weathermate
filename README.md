@@ -1,11 +1,23 @@
-# WeatherMate
-A minimalist weather extension for google chrome using OpenWeather API.
+# WeatherMate Version 1.1.0
 
-***INSTRUCTIONS FOR USE:*** <br>
-**1.** Download the files and unzip the folder <br>
-**2.** Go to chrome's settings (three dots on top right address bar) --> extensions --> manage extensions <br>
-**3.** toggle on "developer mode" on the page's top right <br>
-**4.** Click on "Load Unpacked" and select the "docs" folder inside the "WeatherMate" folder <br>
+## Overview
+WeatherMate is a minimalist and beautiful weather extension for google chrome designed to work on all devices.
 
+## Version 1.1.0 Features
+
+- Togglable Celcius & Fahrenheit
+
+- Intuitive, direct UI & detailed weather data
+
+- Weather Data retrieval for over 200,000 cities around the world
+
+## Usage
+Download from the [Chrome Web Store](https://chromewebstore.google.com/detail/dnhceagmmlgdhjidclcdjdojkboengol?utm_source=item-share-cb)
+
+## Dependencies
+
+- [Google Fonts - Outfit](https://fonts.google.com/specimen/Outfit)
+
+- [Flaticon - rain and snow](https://www.flaticon.com/free-icons/rain) 
 
 

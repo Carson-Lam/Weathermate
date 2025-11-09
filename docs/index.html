@@ -5,7 +5,7 @@
     <title> WeatherMate </title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesEXT.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@650&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
@@ -13,26 +13,27 @@
 <body class = "text-center">
     <div id = "mainContainer">
         <div id = "CityWeatherContainer">
-            <span id="cityDisplay" class = "headerText">...</span>
-            <span>&nbsp;|&nbsp;</span>
-            <span id="weather" class = "headerText">...</span>
+            <span id="cityDisplay" class = "headerText">Loading </span>
+            <!-- <span>&nbsp;<strong>|</strong>&nbsp;</span> -->
+            <span class="separator">◆</span>
+            <span id="weather" class = "headerText"> ... </span>
         </div>
-        
-        <img src="images/SunnySprite.png" alt = "SunnySprite" id="weatherSprite"></img>
+    
+        <img src="images/WeatherMateIcon.png" alt = "Weather Sprite" id="weatherSprite"></img>
 
         <div class = "sectionSeperator"></div>
         
         <div id = "tempContainer">
             <span id="mintemp">...</span>
-            <span id="temp">...</span>
+            <div id = "mainTempContainer">
+                <span id="temp">...</span>
+                <button id="tempToggle" title="Switch Celsius and Fahrenheit">°C</button>
+            </div>
             <span id="maxtemp">...</span>
         </div>
 
         <form id="weatherForm">
-            <!-- <label for="city">Enter your city, region, country:</label> -->
-            <!-- <br> -->
-            <input type="text" id="city" name="city" required placeholder="Custom City: (Tokyo, JP)">
-            <!--<button type="submit" style="border: 0">Get Weather</button>-->
+            <input type="text" id="city" name="city" required placeholder="Enter: Tokyo, JP">
         </form>
     </div>
 
