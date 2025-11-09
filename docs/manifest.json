@@ -9,8 +9,8 @@
         "default_title": "WeatherMate"
     },
     "icons": {
-        "48": "icon48.png",
-        "128": "icon128.png"
+        "48": "images/icon64.png",
+        "128": "images/icon129.png"
     },
     "permissions": [
         "geolocation"

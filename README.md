@@ -20,4 +20,5 @@ Download from the [Chrome Web Store](https://chromewebstore.google.com/detail/dn
 
 - [Flaticon - rain and snow](https://www.flaticon.com/free-icons/rain) 
 
-
+## Preview
+![Preview](docs\Images\WeatherMateCWS2.png)

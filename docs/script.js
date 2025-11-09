@@ -90,7 +90,7 @@ async function fetchData() {
                 minTempElement.innerHTML = parseFloat(minTempElement.dataset.Celsius).toFixed(1);
 
                 if (record.weather[0].main === "Thunderstorm") {
-                    document.getElementById("weatherSprite").src = "images/ThunderySprite.png";
+                    document.getElementById("weatherSprite").src = "ThunderySprite.png";
                 } else if (record.weather[0].main === "Drizzle" || record.weather[0].main === "Rain") {
                     document.getElementById("weatherSprite").src = "images/RainySprite.png";
                 } else if (record.weather[0].main === "Snow") {
