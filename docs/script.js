@@ -1,12 +1,12 @@
 let isCelsius = true;
 
-function showPopup() {
-    if (!localStorage.getItem('popupSeen')) {
-        document.querySelector(".popup").style.display = "flex";
-    } else {
-        document.querySelector(".popup").style.display = "none";
-    }
-}
+// function showPopup() {
+//     if (!localStorage.getItem('popupSeen')) {
+//         document.querySelector(".popup").style.display = "flex";
+//     } else {
+//         document.querySelector(".popup").style.display = "none";
+//     }
+// }
 
 async function fetchData() {
     if (!navigator.geolocation) {
@@ -72,6 +72,11 @@ async function fetchData() {
                 document.querySelector("#tempToggle").disabled = false;
                 event.preventDefault();
                 const city = document.getElementById('city').value;
+
+                if (!city) {
+                    return; // Do nothing if empty
+                }
+
                 const res = await fetch(`https://weathermate-pr27.onrender.com/weather?city=${city}`);
                 const record = await res.json();
                 const tempElement = document.getElementById("temp");
@@ -140,10 +145,10 @@ function updateTemps() {
     }
 }
 
-document.querySelector("#close").addEventListener("click", function () {
-    document.querySelector(".popup").style.display = "none";
-    localStorage.setItem('popupSeen', 'true');
-});
+// document.querySelector("#close").addEventListener("click", function () {
+//     document.querySelector(".popup").style.display = "none";
+//     localStorage.setItem('popupSeen', 'true');
+// });
 
 document.querySelector("#tempToggle").addEventListener("click", function () {
     isCelsius = !isCelsius;
@@ -152,4 +157,4 @@ document.querySelector("#tempToggle").addEventListener("click", function () {
 });
 
 fetchData();
-showPopup();
+// showPopup();

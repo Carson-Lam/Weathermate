@@ -11,8 +11,8 @@
     font-size: 16px;
     
     /* Dimensions */
-    --popup-width: 30rem;      
-    --popup-height: 37.5rem;   
+    /* --popup-width: 30rem;      
+    --popup-height: 37.5rem;    */
     
     /* Spacing */
     --space-xs: 0.3125rem;     /* 5px */
@@ -44,15 +44,15 @@
 }
 
 html, body {
-    width: var(--popup-width);
-    height: var(--popup-height);
+    /* width: var(--popup-width);
+    height: var(--popup-height); */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
 /* Popup styling */
-.popup {
+/* .popup {
     background-color: var(--bg-popup);
     width: 90%;
     height: 75%;
@@ -87,20 +87,23 @@ html, body {
     right: var(--space-sm);
     padding: 0;
     background-color: transparent;
-    font-size: 1.5625rem; /* 25px */
+    font-size: 1.5625rem;
     color: var(--color-gray);
     border: none;
     outline: none;
     cursor: pointer;
-}
+} */
 
 #mainContainer {
     background-color: var(--bg-main);
     /* background-color: red; */ /* Debugging */
-    border-color: var(--color-white);
+    border-color: var(--color-flavor);
+    border-style: solid;
+    border-width: 1px;
     display: inline-block;
     min-width: 17rem;  
-    max-width: var(--popup-width);
+    max-width: 30rem; 
+    width: 100%; 
     padding: 10px;
 }
 
@@ -128,6 +131,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
 #weatherSprite {

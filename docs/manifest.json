@@ -10,7 +10,7 @@
     },
     "icons": {
         "48": "images/icon64.png",
-        "128": "images/icon129.png"
+        "128": "images/icon128.png"
     },
     "permissions": [
         "geolocation"
