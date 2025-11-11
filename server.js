@@ -5,6 +5,12 @@ const cors = require('cors');
 
 const app = express();
 
+// Keep-alive endpoint for UptimeRobot
+app.get('/ping', (req, res) => {
+    res.json({ status: 'alive' });
+});
+
+
 dotenv.config();
 
 app.use(cors());

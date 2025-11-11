@@ -1,5 +1,9 @@
 let isCelsius = true;
 
+// Disable button until data is fetched
+document.querySelector("#tempToggle").disabled = true;
+
+
 // function showPopup() {
 //     if (!localStorage.getItem('popupSeen')) {
 //         document.querySelector(".popup").style.display = "flex";
